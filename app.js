@@ -1,33 +1,18 @@
-// _________higher oder function__________
-// -A function use as a callback function **
-// -A function return by another function **
+// prove function is a value by using it a interested way
 
-// // -A function return by another function
-// function fun(){
-//    return (v1,v2) => v1 * v2
-// }
+// how fun with function constructor
+const obj  = {
+   para : ['a','b'],
+   body : ['return a - b']
+} 
 
-// const str = fun()
-// console.log(str(5,5));
+const cns = new Function(obj.para,obj.body)
 
-// // -A function use as a callback function
+console.log(cns(50,5))
 
-// function fn(cb){
-//    const a = 600;
-//    const b = 754;
-//   return cb(a,b)
+console.log(cns);
 
-// }
+// see what is show on console 
+// const cns = new Function('a','b',`return a + b `)
 
-// const sp = (f,s) =>  {
-//    return f + s
-//  }
-// const spo = (f,s) =>  {
-//    return f*f + s*s
-//  }
-// const spa = (f,s) =>  {
-//    return f*8 + s*9
-//  }
-// console.log(fn(sp));
-// console.log(fn(spo));
-// console.log(fn(spa));
+// console.log(cns);
